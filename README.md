@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# Post Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+Post Management App adalah aplikasi sederhana berbasis **React.js** yang memungkinkan pengguna untuk **mengambil, menambahkan, memperbarui, dan menghapus postingan** menggunakan API dari [JSONPlaceholder](https://jsonplaceholder.typicode.com/). Aplikasi ini menggunakan **Zustand** untuk manajemen state global dan **Tailwind CSS** untuk styling.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- **Fetch Posts**: Mengambil daftar post dari API.
+- **Add Post**: Menambahkan post baru.
+- **Update Post**: Memperbarui post yang sudah ada.
+- **Delete Post**: Menghapus post tertentu.
+- **Loading Indicator**: Menampilkan indikator saat fetching data.
+- **State Management**: Menggunakan **Zustand** untuk mengelola state global.
+- **Styling**: Menggunakan **Tailwind CSS** untuk desain yang responsif.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies Used
+- **React.js** (Vite)
+- **Zustand** (State Management)
+- **Axios** (HTTP Request)
+- **Tailwind CSS** (Styling)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📂 Folder Structure
+```
+├── src
+│   ├── assets          # Assets
+│   ├── components      # Reusable components
+│   ├── store           # Zustand store
+│   ├── pages           # Halaman utama
+│   ├── App.tsx         # Entry point
+│   ├── main.tsx        # Render root
+│   ├── index.css       # Tailwind CSS
+│
+├── public
+│   
+├── package.json        # Dependencies
+├── README.md           # Documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Installation & Setup
+1. **Clone Repository**
+   ```sh
+   git clone https://github.com/renalfa/test-dot.git
+   cd post
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Install Dependencies**
+   ```sh
+   yarn install
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+3. **Run Development Server**
+   ```sh
+   yarn dev
+   ```
+
+4. **Open in Browser**
+   Buka `http://localhost:5173` untuk melihat aplikasi berjalan.
+
+## 🛠️ Credential for login
+username: 
+```sh
+admin
 ```
+password:
+```sh
+password
+```
+
+## 🎨 UI Preview
+![Screenshot 2025-03-19 at 23 15 24](https://github.com/user-attachments/assets/d5728f66-c19f-4e30-8b6d-7b887c769e0c)
+![Screenshot 2025-03-19 at 23 15 43](https://github.com/user-attachments/assets/d7de8b3f-df7b-427c-b82e-8cece5556156)
+
+
