@@ -101,23 +101,23 @@ const DashboardPage = () => {
         )}
       </div>
 
-      {isLoading && (
+      {isLoading ? (
         <div className="w-full flex justify-center items-center mt-16">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
           <p className="ml-4">Loading...</p>
         </div>
+      ) : (
+        <ul className="grid mt-16 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+          {posts.map((post) => (
+            <PostCard
+              post={post}
+              key={post.id}
+              onEdit={() => handleClick(post.id)}
+              onDelete={() => deletePost(post.id)}
+            />
+          ))}
+        </ul>
       )}
-
-      <ul className="grid mt-16 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {posts.map((post) => (
-          <PostCard
-            post={post}
-            key={post.id}
-            onEdit={() => handleClick(post.id)}
-            onDelete={() => deletePost(post.id)}
-          />
-        ))}
-      </ul>
     </div>
   );
 };
